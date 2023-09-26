@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffff"
+    android:orientation="horizontal"
+    tools:context=".MainActivity">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView2"
+        android:layout_width="151dp"
+        android:onClick="myButton"
+        android:layout_height="40dp"
+        android:layout_marginStart="8dp"
+        android:elevation="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/rvView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="100dp"
+            android:src="@drawable/india">
+
+        </ImageView>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="66dp"
+            android:layout_height="35dp"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="2sp"
+            android:textStyle="bold"
+            android:id="@+id/btn_hindi"
+            android:onClick="Hindi_button"
+            android:backgroundTint="#ffff"
+            android:text="Hindi">
+
+
+        </androidx.appcompat.widget.AppCompatButton>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvView"
+        android:layout_width="415dp"
+        android:layout_height="579dp"
+        android:layout_marginTop="10dp"
+        tools:listitem="@layout/rv_item"
+        android:layout_marginEnd="2dp"
+        android:layout_marginLeft="2dp"
+        android:layout_marginRight="2dp"
+        android:layout_marginBottom="1dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView3"
+        android:layout_width="165dp"
+        android:layout_height="40dp"
+        android:layout_marginEnd="8dp"
+        android:elevation="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/rvView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:layout_width="45dp"
+            android:layout_height="35dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="100dp"
+            android:src="@drawable/unitedkingdom">
+
+        </ImageView>
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:layout_marginStart="46dp"
+            android:layout_marginTop="2sp"
+            android:backgroundTint="#ffff"
+            android:onClick="English_Button"
+            android:id="@+id/english_btn"
+            android:text="English"
+            android:textStyle="bold">
+
+        </androidx.appcompat.widget.AppCompatButton>
+
+        <!--        <TextView-->
+<!--            android:layout_width="60dp"-->
+<!--            android:layout_height="30dp"-->
+<!--            android:layout_marginStart="50dp"-->
+<!--            android:layout_marginTop="10sp"-->
+<!--            android:text="English"-->
+<!--            android:textStyle="bold">-->
+
+<!--        </TextView>-->
+    </androidx.cardview.widget.CardView>
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        app:layout_constraintBottom_toTopOf="@+id/rvView"
+        app:layout_constraintEnd_toStartOf="@+id/cardView3"
+        app:layout_constraintStart_toEndOf="@+id/cardView2"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/baseline_compare_arrows_24" />
+</androidx.constraintlayout.widget.ConstraintLayout>
