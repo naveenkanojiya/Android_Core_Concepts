@@ -5,13 +5,13 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.recyclerviewwithme.databinding.ActivityMainBinding
+import com.example.recyclerviewwithme.databinding.ActivityRecyclerviewBinding
 
 class MainActivity : AppCompatActivity() {
-    lateinit var binding: ActivityMainBinding
+    lateinit var binding: ActivityRecyclerviewBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityMainBinding.inflate(layoutInflater)
+        binding = ActivityRecyclerviewBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
         var dataList = ArrayList<Modal>()
@@ -22,9 +22,14 @@ class MainActivity : AppCompatActivity() {
             dataList.add(Modal(R.drawable.navin,"visal"))
             dataList.add(Modal(R.drawable.man,"kumar jii"))
             dataList.add(Modal(R.drawable.girl,"shaliy"))
+            dataList.add(Modal(R.drawable.men,"shivam Emoji"))
+            dataList.add(Modal(R.drawable.me,"Naveen Kanojiya"))
+            dataList.add(Modal(R.drawable.navin,"visal"))
+            dataList.add(Modal(R.drawable.man,"kumar jii"))
+            dataList.add(Modal(R.drawable.girl,"shaliy"))
         }
 
-        var adapter = Adapter(dataList)
+        var adapter = Adapter(dataList,this)
         binding.rvView.adapter = adapter
         binding.rvView.layoutManager = LinearLayoutManager(this)
 

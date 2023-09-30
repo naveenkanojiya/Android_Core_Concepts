@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/profile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:icon="@drawable/profile"
+        android:title="profile"
+        app:showAsAction="collapseActionView">
+        <menu>
+            <item
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:icon="@drawable/baseline_feed_24"
+                android:title="feedback" />
+            <item
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:icon="@drawable/setting"
+                android:title="settings" />
+
+            <item
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:icon="@mipmap/ic_launcher"
+                android:title="logout" />
+        </menu>
+    </item>
+    <item
+        android:id="@+id/feedBake"
+        android:checkable="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:icon="@drawable/baseline_feed_24"
+        android:title="feedback" />
+    <item
+        android:id="@+id/setting"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:icon="@drawable/setting"
+        android:checkable="true"
+        app:showAsAction="always"
+        android:title="settings" />
+
+    <item
+        android:id="@+id/logOut"
+        android:layout_width="wrap_content"
+        android:checkable="false"
+        android:layout_height="wrap_content"
+        android:icon="@mipmap/ic_launcher"
+        android:title="logout" />
+</menu>
