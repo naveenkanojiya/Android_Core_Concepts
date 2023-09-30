@@ -5,12 +5,15 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.navigation.findNavController
 import com.example.recyclerviewwithme.R
+import com.example.recyclerviewwithme.databinding.FragmentSearchBinding
 import kotlinx.coroutines.flow.combine
 
 
 class SearchFragment : Fragment() {
+    lateinit var binding:FragmentSearchBinding
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -21,8 +24,18 @@ class SearchFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        val navController = view.findNavController()
-       // navController.navigate(R.id.)
+        binding.btnSearchFgm.setOnClickListener {
+           // Toast.makeText(requireContext(),"Naveen",Toast.LENGTH_SHORT).show()
+            val navController = view.findNavController()
+            navController.navigate(R.id.action_searchFragment_to_profileFragment)
+        }
+
+        binding.btnSearchFgm2.setOnClickListener {
+            // Toast.makeText(requireContext(),"Naveen",Toast.LENGTH_SHORT).show()
+            val navController = view.findNavController()
+            navController.navigate(R.id.action_searchFragment_to_addFragment)
+        }
+
 
     }
     override fun onCreateView(
@@ -30,7 +43,8 @@ class SearchFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_search, container, false)
+        binding = FragmentSearchBinding.inflate(inflater,container,false)
+        return binding.root
     }
 
     companion object {

@@ -13,7 +13,14 @@
         android:id="@+id/searchFragment"
         android:name="com.example.recyclerviewwithme.ui.SearchFragment"
         android:label="fragment_search"
-        tools:layout="@layout/fragment_search" />
+        tools:layout="@layout/fragment_search" >
+        <action
+            android:id="@+id/action_searchFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
+        <action
+            android:id="@+id/action_searchFragment_to_addFragment"
+            app:destination="@id/addFragment" />
+    </fragment>
     <fragment
         android:id="@+id/addFragment"
         android:name="com.example.recyclerviewwithme.ui.AddFragment"
